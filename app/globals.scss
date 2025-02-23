@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+  --color-background: whitesmoke;
+  --color-foreground: rgb(25, 25, 25);
+  --color-app: rgb(114, 34, 175);
+  --color-gray: rgb(236, 236, 236);
+  --color-blue: rgb(44, 37, 107);
+
+  --font-family: "Roboto Mono", serif;
+  --font-optical-sizing: auto;
+}
+
+body {
+  color: var(--color-foreground);
+  background: var(--color-background);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+
+  font-family: var(--font-family) !important;
+  font-optical-sizing: var(--font-optical-sizing);
+}
+
+li.MuiListItem-root {
+  padding: 0 !important;
+  margin-bottom: 20pt;
+}
+
+.page {
+  display: flex;
+  justify-content:center ;
+  margin: 0pt auto;
+}
+
+.container_page {
+  width: 960pt;
+
+  @media (max-width: 1280px) {
+    width: 100vw !important;
+  }
+}
+
+.navbar {
+  background-color: var(--color-app) !important;
+}
+
+.default_padding {
+  padding: 20pt !important;
+
+  @media (max-width: 768px) {
+    padding: 10pt !important; 
+  }
+}
+
+/* PROFILE __________________________*/
+
+.container_profile_page {
+  .post_card {
+    width: 920pt !important;
+    height: auto;
+
+    @media (max-width: 1280px) {
+      width: calc(100vw - 40pt) !important;
+    }
+  }
+
+  .user_info {
+    display: flex;
+    gap: 5pt;
+    align-items: center;
+  }
+  
+  .user_time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20pt;
+  }
+
+  .container_profile {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 10pt;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .profile_complete {
+      display: flex;
+      flex-direction: row;
+      gap: 20pt;
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+      }
+  
+    }
+
+    .profile_info {
+      margin-top: 60pt;
+      display: flex;
+      flex-direction: column;
+
+      @media (max-width: 768px) {
+        margin-top: 0pt;
+        align-items: center;
+        margin-bottom: 20pt;
+      }
+    }
+
+    .user_name {
+      font-size: 20pt;
+      font-weight: bold;
+    }
+
+    .user_friends {
+      font-size: 12pt;
+      font-weight: 600;
+      margin-top: 10pt;
+    }
+
+    .btns_profile {
+      display: flex;
+      flex-direction: column;
+      gap: 10pt;
+
+      @media (max-width: 768px) {
+        align-items: center;
+      }
+    }
+
+    .btn_profile {
+      font-size: 10pt;
+      font-weight: 500;
+      height: 30pt;
+      background-color: var(--color-app);
+      width: 160pt ;
+      
+
+      &.edit {
+        background-color: var(--color-app);
+      }
+
+      &.friends {
+        background-color: var(--color-blue);
+      }
+    }
+  }
+}
+/* ___________________________________*/
+
+/* Temporário __________________________*/
+button {
+  background-color: var(--app-color);
+  margin: 90px 30px;
+  padding: 40px 80px;
+  font-size: 40pt;
+}
+
+.temp_page_title {
+  font-size: 100px;
+  margin: 60pt;
+  text-align: center;
+}
