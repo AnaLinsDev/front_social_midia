@@ -10,6 +10,8 @@ export default function Home() {
   interface UserRegistrationData {
     username: string;
     password: string;
+    email: string;
+    full_name: string;
   }
 
   interface UserLoginData {
@@ -22,6 +24,8 @@ export default function Home() {
       const bodyData: UserRegistrationData = {
         username: "ana",
         password: "123",
+        email: "ana@gmail.com",
+        full_name: "ana lins",
       };
       const result = await registerUser(bodyData);
       console.log("Registration successful:", result);

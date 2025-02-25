@@ -16,6 +16,7 @@ body {
   background: var(--color-background);
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  margin-top: 45pt;
 
   font-family: var(--font-family) !important;
   font-optical-sizing: var(--font-optical-sizing);
@@ -32,6 +33,18 @@ li.MuiListItem-root {
   margin: 0pt auto;
 }
 
+.btn_outlined_default {
+  color: var(--color-app) !important;
+}
+
+.btn_default {
+  background-color: var(--color-app) !important;
+}
+
+.btn_disabled_default {
+  background-color: var(--color-gray) !important;
+}
+
 .container_page {
   width: 960pt;
 
@@ -40,9 +53,6 @@ li.MuiListItem-root {
   }
 }
 
-.navbar {
-  background-color: var(--color-app) !important;
-}
 
 .default_padding {
   padding: 20pt !important;
@@ -52,107 +62,7 @@ li.MuiListItem-root {
   }
 }
 
-/* PROFILE __________________________*/
 
-.container_profile_page {
-  .post_card {
-    width: 920pt !important;
-    height: auto;
-
-    @media (max-width: 1280px) {
-      width: calc(100vw - 40pt) !important;
-    }
-  }
-
-  .user_info {
-    display: flex;
-    gap: 5pt;
-    align-items: center;
-  }
-  
-  .user_time {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20pt;
-  }
-
-  .container_profile {
-    display: flex;
-    justify-content: space-between;
-
-    margin-bottom: 10pt;
-
-    @media (max-width: 768px) {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .profile_complete {
-      display: flex;
-      flex-direction: row;
-      gap: 20pt;
-
-      @media (max-width: 768px) {
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        align-items: center;
-      }
-  
-    }
-
-    .profile_info {
-      margin-top: 60pt;
-      display: flex;
-      flex-direction: column;
-
-      @media (max-width: 768px) {
-        margin-top: 0pt;
-        align-items: center;
-        margin-bottom: 20pt;
-      }
-    }
-
-    .user_name {
-      font-size: 20pt;
-      font-weight: bold;
-    }
-
-    .user_friends {
-      font-size: 12pt;
-      font-weight: 600;
-      margin-top: 10pt;
-    }
-
-    .btns_profile {
-      display: flex;
-      flex-direction: column;
-      gap: 10pt;
-
-      @media (max-width: 768px) {
-        align-items: center;
-      }
-    }
-
-    .btn_profile {
-      font-size: 10pt;
-      font-weight: 500;
-      height: 30pt;
-      background-color: var(--color-app);
-      width: 160pt ;
-      
-
-      &.edit {
-        background-color: var(--color-app);
-      }
-
-      &.friends {
-        background-color: var(--color-blue);
-      }
-    }
-  }
-}
-/* ___________________________________*/
 
 /* Temporário __________________________*/
 button {

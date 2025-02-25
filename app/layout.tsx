@@ -1,7 +1,7 @@
 "use client";
 
 import "./globals.scss";
-import { NavBarComponent } from "./components/common/navbar";
+import { NavBar } from "./components/common/navbar";
 
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "./theme";
@@ -15,7 +15,7 @@ export default function RootLayout({
     <ThemeProvider theme={theme}>
       <html lang="en">
         <body>
-          <NavBarComponent />
+          <NavBar />
           {children}
         </body>
       </html>

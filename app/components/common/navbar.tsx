@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 
 import { useRouter } from "next/navigation";
+import styles from './navbar.module.scss';
 import React from "react";
 
 enum Routes {
@@ -16,16 +17,16 @@ enum Routes {
   LOGIN = "/login",
 }
 
-export default function NavBarComponent() {
+export default function NavBar() {
   const router = useRouter();
 
   return (
-    <Box sx={{ flexGrow: 1 }} className="posts_profile">
-      <AppBar position="static" className="navbar">
+    <Box sx={{ flexGrow: 1 }}  className={styles.navbar_component}>
+      <AppBar position="static" className={styles.navbar}>
         <Toolbar>
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             <Button color="inherit" onClick={() => router.push(Routes.FEED)}>
-              HOME
+              POSTS
             </Button>
           </Typography>
 
@@ -38,7 +39,7 @@ export default function NavBarComponent() {
           </Button>
 
           <Button color="inherit" onClick={() => router.push(Routes.LOGIN)}>
-            Login / Register
+            Login / SIGN UP
           </Button>
         </Toolbar>
       </AppBar>
@@ -46,4 +47,4 @@ export default function NavBarComponent() {
   );
 }
 
-export { NavBarComponent };
+export { NavBar };

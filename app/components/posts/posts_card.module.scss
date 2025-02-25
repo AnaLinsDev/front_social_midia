@@ -1,0 +1,21 @@
+.user_info {
+    display: flex;
+    gap: 5pt;
+    align-items: center;
+  }
+  
+  .user_time {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20pt;
+    font-size: 11pt;
+  }
+
+  .post_card {
+    width: 920pt !important;
+    height: auto;
+  
+    @media (max-width: 1280px) {
+      width: calc(100vw - 40pt) !important;
+    }
+  }

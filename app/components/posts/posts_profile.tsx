@@ -121,7 +121,7 @@ const posts = [
 export default function PostsProfile() {
 
   return (
-    <div className="container_posts_profile default_padding">
+    <div className="default_padding">
       <List sx={style}>
         {posts.map((post) => (
           <ListItem key={post.id} className="default_padding">

@@ -8,6 +8,7 @@ import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 
 import { PostCardProps } from "../../interfaces";
+import styles from './posts_card.module.scss';
 
 export default function PostCard({ post }: PostCardProps) {
   function timeAgo(date: Date): string {
@@ -39,21 +40,19 @@ export default function PostCard({ post }: PostCardProps) {
   const formattedTimeAgo = "Posted " + timeAgo(date);
 
   return (
-    <div className="container_posts_card">
-      <Card className="post_card">
+    <div>
+      <Card className={styles.post_card}>
         <CardContent>
-          <Typography
-            className="user_time"
-            gutterBottom
-            sx={{ color: "text.secondary", fontSize: 14 }}
+          <div
+            className={styles.user_time}
           >
-            <span className="user_info">
+            <span className={styles.user_info}>
               <Avatar alt="Avatar Profile" sx={{ width: 30, height: 30 }} />
               {post.username}
             </span>
 
             <span>{formattedTimeAgo}</span>
-          </Typography>
+          </div>
           <Typography variant="h5" component="div">
             {post.content}
           </Typography>

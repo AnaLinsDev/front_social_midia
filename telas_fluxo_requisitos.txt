@@ -1,9 +1,9 @@
 
-LOGIN/REGISTER
+LOGIN/SIGNUP
 
 - Serão 2 formulários, dependendo da opção selecionada pelo usuário, será mostrado o form de REGISTER ou o de LOGIN
 
-- Ao fazer o REGISTER, deve mostrar alerta de sucesso e mostra o formulário de login.
+- Ao fazer o SIGNUP, deve mostrar alerta de sucesso e mostra o formulário de login.
 - Ao fazer o LOGIN, deve ser guardado o token recebido no storage do navegador
 
 __________________
@@ -66,9 +66,9 @@ __________________
 
 AUTH FLOW
 
-- Quando logado, o usuário pode ver todas as telas, exceto a de Login/Register
+- Quando logado, o usuário pode ver todas as telas, exceto a de Login/SignUp
 
 - Quando desconectado, o usuário poderá acessar:
         - Lista de outros usuários
         - Feed 
-        - Tela de Login/Register
+        - Tela de Login/SignUp

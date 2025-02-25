@@ -3,30 +3,30 @@ const apiConfig = {
   port: 8000,
   endpoints: {
     // Auth
-    register: "/api/auth/register/",
-    login: "/api/auth/login/",
-    logout: "/api/auth/logout/",
+    register: "/auth/register/",
+    login: "/auth/login/",
+    logout: "/auth/logout/",
 
     // Profiles
-    profiles: "/api/profiles/",
-    profile: "/api/profiles/{profile_id}/",
+    profiles: "/profiles/",
+    profile: "/profiles/{profile_id}/",
 
     // Friends
-    friendRequests: "/api/friend-requests/",
-    friendRequest: "/api/friend-requests/{id}/",
+    friendRequests: "/friend-requests/",
+    friendRequest: "/friend-requests/{id}/",
 
     // Posts
-    posts: "/api/posts/",
-    postsFeed: "/api/posts/feed/",
-    comments: "/api/comments/",
-    likes: "/api/likes/",
+    posts: "/posts/",
+    postsFeed: "/posts/feed/",
+    comments: "/comments/",
+    likes: "/likes/",
 
     // Notifications
-    notifications: "/api/notifications/",
+    notifications: "/notifications/",
 
     // Search
-    searchUsers: "/api/search-users/",
-    searchPosts: "/api/search-posts/",
+    searchUsers: "/search-users/",
+    searchPosts: "/search-posts/",
   },
   headers: {
     "Content-Type": "application/json",
