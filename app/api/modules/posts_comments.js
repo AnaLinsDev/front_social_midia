@@ -4,10 +4,12 @@ import apiRequest from "../api_request.js";
 async function getComments(bodyData) {
   const errorMessage = "Read Comments failed: ";
   const method = "GET";
+  const token = ""
   return apiRequest(
     apiConfig.endpoints.comments,
     bodyData,
     method,
+    token,
     errorMessage
   );
 }

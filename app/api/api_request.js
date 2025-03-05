@@ -1,24 +1,28 @@
 import apiConfig from "./api_config.js";
 
-async function apiRequest(endpoint, bodyData, method, errorMessage) {
+async function apiRequest(endpoint, bodyData, method, token, errorMessage) {
   try {
-    const response = await fetch(
-      `${apiConfig.baseUrl}:${apiConfig.port}${endpoint}`,
-      {
-        method: method,
-        headers: apiConfig.headers,
-        body: JSON.stringify(bodyData),
-      }
-    );
+    const jsonstring = JSON.stringify(bodyData);
 
-    if (!response.ok) {
-      const errorData = await response.json();
-      throw new Error(
-        errorData.message || `HTTP error! status: ${response.status}`
-      );
+    console.log(jsonstring);
+
+    const url = `${apiConfig.baseUrl}:${apiConfig.port}${endpoint}`;
+
+    const headers = {
+      "Content-Type": "application/json",
+    };
+
+    if (token) {
+      headers.Authorization = `Bearer ${token}`; 
     }
 
-    return await response.json();
+    const response = await fetch(url, {
+      method: method,
+      headers: headers, 
+      body: JSON.stringify(bodyData),
+    });
+
+    return response;
   } catch (error) {
     console.error(`${errorMessage}:`, error);
     throw error;

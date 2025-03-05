@@ -5,10 +5,12 @@ import apiRequest from "../api_request.js";
 async function getMyFriends(bodyData) {
   const errorMessage = "Read Friends List failed: ";
   const method = "GET";
+  const token = ""
   return apiRequest(
     apiConfig.endpoints.friendRequests,
     bodyData,
     method,
+    token,
     errorMessage
   );
 }
@@ -17,10 +19,12 @@ async function getMyFriends(bodyData) {
 async function removeFriend(bodyData) {
   const errorMessage = "Remove Friend failed: ";
   const method = "DELETE";
+  const token = ""
   return apiRequest(
     apiConfig.endpoints.friendRequest,
     bodyData,
     method,
+    token,
     errorMessage
   );
 }
