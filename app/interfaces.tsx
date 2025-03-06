@@ -7,6 +7,7 @@ interface PostInterface {
   avatar: string;
   userId: number;
   username: string;
+  image: string;
 }
 
 interface PostCardProps {

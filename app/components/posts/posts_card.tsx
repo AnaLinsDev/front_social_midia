@@ -4,11 +4,10 @@ import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
 import Avatar from "@mui/material/Avatar";
 
 import { PostCardProps } from "../../interfaces";
-import styles from './posts_card.module.scss';
+import styles from "./posts_card.module.scss";
 
 export default function PostCard({ post }: PostCardProps) {
   function timeAgo(date: Date): string {
@@ -35,17 +34,19 @@ export default function PostCard({ post }: PostCardProps) {
     }
   }
 
-  const publicationDate = post.publicationDate.replace('Z', '');
+  const publicationDate = post.publicationDate.replace("Z", "");
   const date = new Date(publicationDate);
   const formattedTimeAgo = "Posted " + timeAgo(date);
 
   return (
-    <div>
+    <div className={styles.post_card_div}>
       <Card className={styles.post_card}>
         <CardContent>
-          <div
-            className={styles.user_time}
-          >
+          <div className={styles.post_image}>
+            <img src={post.image} alt="post image" loading="lazy"></img>
+          </div>
+
+          <div className={styles.user_time}>
             <span className={styles.user_info}>
               <Avatar alt="Avatar Profile" sx={{ width: 30, height: 30 }} />
               {post.username}
@@ -53,9 +54,9 @@ export default function PostCard({ post }: PostCardProps) {
 
             <span>{formattedTimeAgo}</span>
           </div>
-          <Typography variant="h5" component="div">
+          <span>
             {post.content}
-          </Typography>
+          </span>
         </CardContent>
         <CardActions>
           <Button size="small">Likes ( {post.likes} )</Button>

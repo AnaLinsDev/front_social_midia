@@ -1,10 +1,12 @@
 import apiConfig from "../api_config.js";
 import apiRequest from "../api_request.js";
+import { getAccessToken} from "../api_request_login.js"
+
 
 async function getProfile(bodyData) {
-  const errorMessage = "Search Posts failed: ";
+  const errorMessage = "Search Profile failed: ";
   const method = "GET";
-  const token = ""
+  const token = getAccessToken()
   return apiRequest(
     apiConfig.endpoints.profiles,
     bodyData,

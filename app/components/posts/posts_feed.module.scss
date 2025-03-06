@@ -1,0 +1,24 @@
+.posts_grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.post_create_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 20pt;
+}
+
+.posts_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  max-width: var(--post-width);
+}

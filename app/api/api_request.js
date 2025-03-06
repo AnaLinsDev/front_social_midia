@@ -2,9 +2,7 @@ import apiConfig from "./api_config.js";
 
 async function apiRequest(endpoint, bodyData, method, token, errorMessage) {
   try {
-    const jsonstring = JSON.stringify(bodyData);
 
-    console.log(jsonstring);
 
     const url = `${apiConfig.baseUrl}:${apiConfig.port}${endpoint}`;
 
@@ -13,16 +11,21 @@ async function apiRequest(endpoint, bodyData, method, token, errorMessage) {
     };
 
     if (token) {
-      headers.Authorization = `Bearer ${token}`; 
+      headers.Authorization = `Bearer ${token}`;
     }
 
     const response = await fetch(url, {
       method: method,
-      headers: headers, 
+      headers: headers,
       body: JSON.stringify(bodyData),
     });
 
-    return response;
+    const responseData = await response.json();
+
+    return {
+      status: response.status,
+      data: responseData,
+    };
   } catch (error) {
     console.error(`${errorMessage}:`, error);
     throw error;

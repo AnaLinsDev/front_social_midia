@@ -16,7 +16,7 @@ export default function AuthForm() {
     const token = localStorage.getItem("access_token");
 
     if (token) {
-      router.push("/profile"); 
+      router.push("/profile");
     }
   }, [router]);
 
@@ -62,11 +62,8 @@ export default function AuthForm() {
       };
       const result = await registerUser(bodyData);
       console.log("Registration successful:", result);
-
     } catch (error: unknown) {
-      // Type 'any' is used to catch all types of errors
       console.error("Registration error:", error);
-
     }
   };
 
@@ -76,16 +73,8 @@ export default function AuthForm() {
         username: username,
         password: password,
       };
-      await loginUser(bodyData);
-      const result = {
-        access_token:
-          "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhbmEiLCJqdGkiOiJlYmVlYmE1Yi1kZGIyLTQxZTYtYjc2Yi0zMzE4ODVjY2RkYmYiLCJleHAiOjE3NDA3MTY3OTJ9.3s6B5GKYCLx-wBP1Tmo81vGudfHDrgblASl13_PyV98",
-        token_type: "bearer",
-      };
+      loginUser(bodyData);
 
-      // SAVE TOKEN
-
-      console.log("Login successful:", result);
     } catch (error: unknown) {
       console.error("Login error:", error);
     }

@@ -8,8 +8,8 @@ const apiConfig = {
     logout: "/auth/logout/",
 
     // Profiles
-    profiles: "/profiles/",
-    profile: "/profiles/{profile_id}/",
+    profiles: "/profile/",
+    profile: "/profile/{profile_id}/",
 
     // Friends
     friendRequests: "/friend-requests/",

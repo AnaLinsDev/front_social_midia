@@ -9,6 +9,8 @@
 
   --font-family: "Roboto Mono", serif;
   --font-optical-sizing: auto;
+
+  --post-width: 380pt;
 }
 
 body {
@@ -70,10 +72,4 @@ button {
   margin: 90px 30px;
   padding: 40px 80px;
   font-size: 40pt;
-}
-
-.temp_page_title {
-  font-size: 100px;
-  margin: 60pt;
-  text-align: center;
 }
