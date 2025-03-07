@@ -1,13 +1,16 @@
 interface PostInterface {
   id: number;
-  title: string;
   content: string;
-  likes: number;
-  publicationDate: string;
-  avatar: string;
-  userId: number;
-  username: string;
+  created_at: string;
   image: string;
+  likes: number;
+  author: {
+    id: number;
+    username: string;
+    email: string;
+    full_name: string;
+    profile_image: string;
+  };
 }
 
 interface PostCardProps {
@@ -15,7 +18,7 @@ interface PostCardProps {
 }
 
 interface PostListProps {
-    posts: PostCardProps[];
-  }
+  posts: PostCardProps[];
+}
 
-export type {PostCardProps, PostListProps };
+export type { PostCardProps, PostListProps };

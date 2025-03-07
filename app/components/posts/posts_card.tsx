@@ -34,8 +34,8 @@ export default function PostCard({ post }: PostCardProps) {
     }
   }
 
-  const publicationDate = post.publicationDate.replace("Z", "");
-  const date = new Date(publicationDate);
+  const created_at = post.created_at.replace("Z", "");
+  const date = new Date(created_at);
   const formattedTimeAgo = "Posted " + timeAgo(date);
 
   return (
@@ -49,14 +49,12 @@ export default function PostCard({ post }: PostCardProps) {
           <div className={styles.user_time}>
             <span className={styles.user_info}>
               <Avatar alt="Avatar Profile" sx={{ width: 30, height: 30 }} />
-              {post.username}
+              {post.author.username}
             </span>
 
             <span>{formattedTimeAgo}</span>
           </div>
-          <span>
-            {post.content}
-          </span>
+          <span>{post.content}</span>
         </CardContent>
         <CardActions>
           <Button size="small">Likes ( {post.likes} )</Button>

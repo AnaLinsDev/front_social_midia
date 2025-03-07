@@ -5,23 +5,27 @@ async function getMyPosts(bodyData) {
   const errorMessage = "Read Posts failed: ";
   const method = "GET";
   const token = ""
-  return apiRequest(apiConfig.endpoints.posts, bodyData, method, token, errorMessage);
+  const parameterData = ""
+  return apiRequest(apiConfig.endpoints.posts, bodyData, parameterData, method, token, errorMessage);
 }
 
 async function addPost(bodyData) {
   const errorMessage = "Add Post failed: ";
   const method = "POST";
   const token = ""
-  return apiRequest(apiConfig.endpoints.posts, bodyData, method, token, errorMessage);
+  const parameterData = ""
+  return apiRequest(apiConfig.endpoints.posts, bodyData, parameterData, method, token, errorMessage);
 }
 
-async function getFeedPosts(bodyData) {
+async function getFeedPosts(bodyData, parameterData) {
   const errorMessage = "Read Feed failed: ";
   const method = "GET";
   const token = ""
+  const parameterData = ""
   return apiRequest(
     apiConfig.endpoints.postsFeed,
     bodyData,
+    parameterData,
     method,
     token,
     errorMessage
