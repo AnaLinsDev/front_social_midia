@@ -8,7 +8,7 @@ async function getProfile(bodyData) {
   const token = getAccessToken();
   const parameterData = ""
   return apiRequest(
-    apiConfig.endpoints.profiles,
+    apiConfig.endpoints.profile,
     bodyData,
     parameterData,
     method,
@@ -20,7 +20,7 @@ async function getProfile(bodyData) {
 async function editProfile(bodyData) {
   const errorMessage = "Profile Edit failed: ";
   const method = "PUT";
-  const token = "";
+  const token = getAccessToken();
   const parameterData = ""
   return apiRequest(
     apiConfig.endpoints.profile,
@@ -32,14 +32,13 @@ async function editProfile(bodyData) {
   );
 }
 
-// ENDPOINT NÃO EXISTE
 async function deleteProfile(bodyData) {
   const errorMessage = "Profile Delete failed: ";
   const method = "DELETE";
-  const token = "";
+  const token = getAccessToken();
   const parameterData = ""
   return apiRequest(
-    apiConfig.endpoints.register,
+    apiConfig.endpoints.profile,
     bodyData,
     parameterData,
     method,

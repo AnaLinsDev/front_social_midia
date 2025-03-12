@@ -1,3 +1,5 @@
+// Posts _____________________________
+
 interface PostInterface {
   id: number;
   content: string;
@@ -9,7 +11,7 @@ interface PostInterface {
     username: string;
     email: string;
     full_name: string;
-    profile_image: string;
+    profile_image: File | null;
   };
 }
 
@@ -21,4 +23,15 @@ interface PostListProps {
   posts: PostCardProps[];
 }
 
-export type { PostCardProps, PostListProps };
+// Profile _____________________________
+
+interface ProfileInterface {
+  id: number;
+  username: string;
+  email: string;
+  full_name: string;
+  profile_image: File | null;
+}
+
+
+export type { PostCardProps, PostListProps, ProfileInterface };

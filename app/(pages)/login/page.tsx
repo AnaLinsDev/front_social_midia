@@ -40,6 +40,7 @@ export default function AuthForm() {
     password: string;
     email: string;
     full_name: string;
+    profile_image: File | null;
   }
 
   interface UserLoginData {
@@ -59,6 +60,7 @@ export default function AuthForm() {
         password: password,
         email: email,
         full_name: fullName,
+        profile_image: null
       };
       const result = await registerUser(bodyData);
       console.log("Registration successful:", result);

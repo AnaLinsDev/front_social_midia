@@ -29,11 +29,9 @@ export default function NavBar() {
   }, []);
 
   async function logout() {
-    const result = await logoutUser();
+    await logoutUser();
 
-    if (result.status == 200) {
-      localStorage.removeItem("access_token");
-    }
+    localStorage.removeItem("access_token");
   }
 
   return (
